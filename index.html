@@ -1,16 +1,28 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="script1.js"></script>
+    <link rel="stylesheet" href="style1.css">
+	<title>Web App - Simple Interest Calculator</title>
     </head>
-    <body>
+    <body onload=populateyears()>
+		<div class="maindiv">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+		<table>
+        <tr class="spaceUnder">
+		<td>Amount</td><td> <input type="number"  id="principal"></td> </tr> 
+		<tr class="spaceUnder">
+        <td>Interest Rate</td><td> <input type="range" id="rate" min="0" max="20" 
+			value="10.25" step="0.25" onchange="updateRate()"><span id="rate_val">10.25</output></td> </tr> 
+		<tr class="spaceUnder">
+        <td>No. of Years</td><td> <select id="years" ></select></td></tr>  
+		<tr >
+        <td><button onclick="compute(); return false">Compute Interest</button></td></tr>
+		</table>
+		<span id="result" ></span>
+        
+		<footer>&#169; This Calculator belongs to Djamshid Bakhronov</footer>
+		</div>
+		
     </body>
 </html>
